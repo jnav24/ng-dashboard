@@ -1,0 +1,98 @@
+[
+	{
+		"syntax": "AS3",
+		"name": "ActionScript 3"
+	},
+	{
+		"syntax": "Bash",
+		"name": "Bash/Shell"
+	},
+	{
+		"syntax": "ColdFusion",
+		"name": "ColdFusion"
+	},
+	{
+		"syntax": "CSharp",
+		"name": "C#"
+	},
+	{
+		"syntax": "Cpp",
+		"name": "C++"
+	},
+	{
+		"syntax": "Css",
+		"name": "CSS"
+	},
+	{
+		"syntax": "Delphi",
+		"name": "Delphi"
+	},
+	{
+		"syntax": "Diff",
+		"name": "Diff"
+	},
+	{
+		"syntax": "Erlang",
+		"name": "Erlang"
+	},
+	{
+		"syntax": "Groovy",
+		"name": "Groovy"
+	},
+	{
+		"syntax": "JScript",
+		"name": "JavaScript"
+	},
+	{
+		"syntax": "Java",
+		"name": "Java"
+	},
+	{
+		"syntax": "JavaFX",
+		"name": "JavaFX"
+	},
+	{
+		"syntax": "Perl",
+		"name": "Perl"
+	},
+	{
+		"syntax": "Php",
+		"name": "Php"
+	},
+	{
+		"syntax": "Plain",
+		"name": "Plain Text"
+	},
+	{
+		"syntax": "PowerShell",
+		"name": "PowerShell"
+	},
+	{
+		"syntax": "Python",
+		"name": "Python"
+	},
+	{
+		"syntax": "Ruby",
+		"name": "Ruby"
+	},
+	{
+		"syntax": "Scala",
+		"name": "Scala"
+	},
+	{
+		"syntax": "Sass",
+		"name": "Sass"
+	},
+	{
+		"syntax": "Sql",
+		"name": "SQL"
+	},
+	{
+		"syntax": "Vb",
+		"name": "Visual Basic"
+	},
+	{
+		"syntax": "Xml",
+		"name": "XML/HTML"
+	}
+]

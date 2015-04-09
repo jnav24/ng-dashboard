@@ -1,0 +1,49 @@
+<article class="control__buttons" ng-init="testInit(testPosts.length)">
+	<!--<div ng-bind-html="getSaveBtns(singlePost.status)"></div>-->
+	<a href="{{postBtn.btnSaveUrl}}" class="{{postBtn.btnSaveCall}}" ng-click="sendPost('postBtn.btnSaveCall')">
+		{{postBtn.btnSaveName}}
+	</a>
+	<a href="{{postBtn.btnMakeUrl}}" class="{{postBtn.btnMakeCall}}" ng-click="sendPost('postBtn.btnMakeCall')">
+		{{postBtn.btnMakeName}}
+	</a>
+	<a href="#/posts" class="cancel">Cancel</a>
+	<a href="#/posts" class="delete" ng-click="delPost(singlePost.id)">Delete</a>
+</article>
+
+<article>
+	<input value="{{ singlePost.title }}" class="title">
+	<hr>
+	<div class="bottom">
+		<p>{{ singlePost.date }}</p>
+		<p>{{ singlePost.status }}</p>
+	</div>
+</article>
+
+<article class="categories">
+	<h3>Categories</h3>
+	<aside>
+		<input type="text" placeholder="add category" ng-model="newCategory">
+		<button ng-click="addCategory()">+ Add Category</button>
+	</aside>
+	<aside>
+		<ul>
+			<li ng-repeat="categories in singlePost.categories">
+				<button class="remove" ng-click="removeCategory(categories.cat_name)" title="Delete Category">-</button>
+				{{categories.cat_name}}
+			</li>
+		</ul>
+	</aside>
+</article>
+
+<article class="editor">
+	<div text-angular="text-angular" name="htmlcontent" ng-model="singlePost.content" ta-disabled='disabled'></div>
+	<!--<p editable-textarea="singlePost.content">{{ singlePost.content }}</p>-->
+</article>
+
+<article class="syntaxHighlight">
+	<h3>Syntax</h3>
+	<label ng-repeat="sh in syntaxHighlight" for="{{sh.syntax}}">
+		<input type="checkbox" id="{{sh.syntax}}" name="{{sh.syntax}}">
+		<span>{{sh.name}}</span>
+	</label>
+</article>

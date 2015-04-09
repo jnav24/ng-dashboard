@@ -1,0 +1,31 @@
+<article class="search">
+	<input type="text" ng-model="title.title" ng-change="filter()" placeholder="Filter by...">
+	<select name="categories" ng-model="title.categories.cat_name" ng-model="setFiler(title.categories.cat_name)">
+		<option value="" ng-click="setFilter('')">========</option>
+		<option ng-repeat="category in categories" ng-click="setFilter(category.category_name)">{{ category.category_name}}</option>
+	</select>
+	<div class="btn" ng-click="title.status = 'Publish';setFilter('Publish')" filterbtn>Publish</div>
+	<div class="btn" ng-click="title.status = 'Draft';setFilter('Draft')" filterbtn>Draft</div>
+	<div class="btn" ng-click="title.status = '';setFilter('')" filterbtn>Clear</div>
+</article>
+
+<!-- <article ng-repeat="post in filteredPosts | filter:title"> 
+	do i need this?
+		| startFrom:(currentPage-1)*numPerPage | limitTo:numPerPage
+-->
+
+<article ng-repeat="post in filtered = (posts | filter:title | startFrom:(currentPage-1)*numPerPage | limitTo:numPerPage)">
+	<h2><a href="posts/{{ post.id }}" ng-click="scrollTo()">{{ post.title }}</a></h2>
+	<ul class="categories">
+		<li ng-repeat="categories in post.categories">{{ categories.cat_name }}</li>
+	</ul>
+	<hr>
+	<div class="bottom">
+		<p>{{ post.date }}</p>
+		<p>{{ post.status }}</p>
+	</div>
+</article>
+
+<article>
+	<pagination total-items="totalItems" ng-model="currentPage" max-size="maxSize" boundary-links="true" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
+</article>

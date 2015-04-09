@@ -1,0 +1,105 @@
+article {
+	background: #fff;
+	border: 1px solid #ccc;
+	margin: 20px 5% 20px ($menu + (5 + $menuType));
+	// min-height: 85px;
+	padding: 10px;
+	width: auto;
+	@include box-shadow(0 2px 0 #ccc);
+
+	&.search {
+		select {
+			height: 35px;
+			vertical-align: middle;
+			width: 245px;
+		}
+
+		input {
+			&[type=text] {
+				border: 1px solid map-get($colors,lgry);
+				height: 30px;
+				vertical-align: middle;
+				width: 50%;
+				@include transition(0.5s ease all);
+				&:focus {
+					border: 1px solid map-get($colors,red);
+				}
+			}
+		}
+
+		.btn {
+			background: #d0d0d0;
+			color: darken(#d0d0d0,25%);
+			cursor: pointer;
+			display: inline-block;
+			padding: 5px 10px;
+			vertical-align: middle;
+			@include transition(0.5s background ease);
+		}
+
+		.tOn {
+			background: #2BCA76;
+			color: #fff;
+		}
+	}
+
+	h2 {
+		display: inline-block;
+	}
+
+	.bottom {
+		p {
+			color: map-get($colors,link);
+			display: inline-block;
+			margin: 0 15px 0 0;
+			vertical-align: middle;
+		}
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		text-align: center;
+		&.categories {
+			display: inline-block;
+			padding-left: 10px;
+			li {
+				background: #000;
+				color: #fff;
+				display: inline-block;
+				font-size: 12px;
+				margin-right: 5px;
+				padding: 5px 10px;
+				vertical-align: bottom;
+			}
+		} 
+		&.pagination {
+			ul {
+				font-size: 0;
+			}
+			li {
+				$bd: #ddd;
+				border-bottom: 1px solid $bd;
+				border-left: 1px solid $bd;
+				border-top: 1px solid $bd;
+				border-right: 1px solid $bd;
+				display: inline-block;
+				font-size: 0;
+				// margin-left: -4px;
+				vertical-align: middle;
+				&:last-of-type {
+					border-right: 1px solid $bd;
+				}
+				&.active {
+					background: black;
+					color: #fff;
+				}
+			}
+			a {
+				display: block;
+				font-size: 14px;
+				padding: 5px 10px;
+			}
+		}
+	}
+}

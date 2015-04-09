@@ -1,0 +1,23 @@
+$colors: (
+	blue: #1B86BD,
+	gry: #5d5d5d,
+	link: #6e6e6e,
+	lgry: #efefef,
+	mgry: #dfdfdf,
+	red: #af4b4b,
+	success: #1cbc1c
+);
+$menuType: 0%;
+$menu: 25 + $menuType;
+
+@mixin btnColors($color) {
+	background: $color;
+	color: text-contrast($color);
+	@include box-shadow(0 2px 0 darken($color,20%));
+	&:active {
+		background: $color;
+	}
+	&:hover {
+		background: darken($color,20%);
+	}
+}

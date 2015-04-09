@@ -1,0 +1,28 @@
+.my-account {
+	.imgCtn {
+		height: 300px;
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+		width: 100%;
+		.bg {
+			min-height: 100%;
+			width: 100%;
+			z-index: 1;
+			// @include posa(0,n,n,0);
+		}
+	}
+
+	.profilepic {
+		border: 5px solid white;
+		display: inline-block;
+		margin-top: -90px;
+		overflow: hidden;
+		position: relative;
+		z-index: 2;	
+		@include circle(150px,white);
+		img {
+			width: 100%;
+		}
+	}
+}

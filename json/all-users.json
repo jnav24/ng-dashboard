@@ -1,0 +1,26 @@
+[
+	{
+		"user_id":"1",
+		"username":"Michaelangelo",
+		"img": "item_L_5557579_2561851.jpg",
+		"bgimg":"Sewer_lair_(2).jpg"
+	},
+	{
+		"user_id":"2",
+		"username":"Leonardo",
+		"img": "Leonardo-tmnt-27864205-600-611.jpg",
+		"bgimg":"ninja_turtles_cgi.jpg"
+	},
+	{
+		"user_id":"3",
+		"username":"Raphael",
+		"img": "ralph.jpg",
+		"bgimg":"TMNT-Raphael-Casey_1600.jpg"
+	},
+	{
+		"user_id":"4",
+		"username":"Donatello",
+		"img": "donatello.jpg",
+		"bgimg":"don_images.jpeg"
+	}
+]

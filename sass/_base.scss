@@ -1,0 +1,52 @@
+body {
+	font-family: "OpenSansLight",arial;
+}
+
+a {
+	color: map-get($colors,link);
+	text-decoration: none;
+	@include transition(0.5s all ease);
+	&:hover {
+		color: darken(map-get($colors,link),25%);
+	}
+}
+
+h2, input.title {
+	font-family: 'NixieOneRegular';
+	font-size: 34px;
+	font-weight: normal;
+	margin: 0 0 10px 0;
+}
+
+h3 {
+	font-family: 'NixieOneRegular';
+	font-size: 26px;
+	font-weight: normal;
+	margin: 0 0 10px 0;
+}
+
+hr {
+	background: map-get($colors,red);
+	border: 0;
+	height: 1px;
+}
+
+input.title {
+	border: 1px solid #bfbfbf;
+	width: 100%;
+	@include box-sizing(border-box);
+}
+
+.table {
+	border: 1px solid map-get($colors,mgry);
+	.row {
+		border-bottom: 1px solid map-get($colors,mgry);
+		padding: 10px;
+		&:nth-of-type(2n+1) {
+			background: map-get($colors,mgry);
+		}
+		&.last-of-type {
+			border-bottom: 0;
+		}
+	}
+}

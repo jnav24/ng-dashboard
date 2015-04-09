@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="jnCMS">
+<head>
+	<base href="/www/jn-site/tuts/">
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/jnpanel.css">
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-route.min.js"></script>
+	<script src="js/angular-sanitize.min.js"></script>
+	<script src="js/angular-cookies.min.js"></script>
+	<script src="js/ui-bootstrap-tpls-0.12.0.min.js"></script>
+	<script src="js/shake.js"></script>
+	<script src="js/menu.js"></script>
+
+	<link href="js/xeditable.css" rel="stylesheet">
+	<script src="js/xeditable.min.js"></script>
+
+	<link rel="stylesheet" href="js/editor/textAngular.css">
+	<link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css'>
+	<script src='js/editor/textAngular-sanitize.min.js'></script>
+  	<script src='js/editor/textAngular.min.js'></script>
+  	<script src='js/editor/textAngular-rangy.min.js'></script>
+
+	<script>
+		$(document).ready(function() {
+			$('p.error,ul.error').parent().shake(5, 23, 600);
+		});
+	</script>
+</head>
+<body>
+	
+<nav id="top">
+	<div class="logoCtn">
+		<img src="images/TeenageMutantNinjaTurtles1987-74582.png" alt="">
+	</div>
+	<div ng-controller="jnaccount">
+		<div class="user">
+			<div class="pic"><img src="images/{{user.img}}" alt=""></div>
+			<div class="info">
+				<p>Hello, {{user.username}}</p>
+				<a href="my-account" class="account">My Account</a>
+				<a href="#/" class="logout">Logout</a>
+			</div>
+		</div>
+	</div>
+	<ul ng-controller="jncms" >
+		<menu></menu>
+	</ul>
+</nav>
+
+<div ng-view></div>
+
+
+
+
+
+
+<!-- BROWSER SYNC -->
+<script type='text/javascript'>//<![CDATA[
+    document.write("<script async src='//HOST:3000/browser-sync/browser-sync-client.1.5.4.js'><\/script>".replace(/HOST/g, location.hostname).replace(/PORT/g, location.port));
+//]]></script>
+
+</body>
+</html>

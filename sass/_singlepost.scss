@@ -1,0 +1,179 @@
+article {
+	&.control__buttons {
+		// width: 20%;
+		@include colgrid(0.15,4,left,'a');
+		a {
+			padding: 5px 0;
+			text-align: center;
+
+			&.updatePost, &.savePost {
+				@include btnColors(map-get($colors,success));
+			}
+			&.draftPost, &.publishPost {
+				@include btnColors(map-get($colors,blue));
+			}
+			&.cancel {
+				@include btnColors(#ccc);
+			}
+			&.delete {
+				@include btnColors(map-get($colors,red));
+			}
+		}
+	}
+
+	&.control {
+		@include clearfix;
+		aside.control {
+			&__tags, &__buttons {
+				float: left;
+				@include box-sizing(border-box);
+			}
+
+			&__tags {
+				width: 80%;
+				p {
+					margin: 0;
+				}
+			}
+		}
+	}	
+
+	&.categories {
+		@include clearfix;
+		@include colgrid(0.5,2,left,'aside');
+		aside {
+			input {
+				display: block;
+				margin-bottom: 10px;
+				width: 100%;
+			}
+			button {
+				background: none;
+				border: 0;
+				border-bottom: 1px dashed map-get($colors,success);
+				color: map-get($colors,success);
+				&.remove {
+					border: 0;
+					color: #fff;
+					cursor: pointer;
+					font-weight: bold;
+					line-height: 0;
+					margin-right: 5px;
+					@include circle(20px,red);
+				}
+			}
+			ul {
+				border: 1px solid #bfbfbf;
+				height: 75px;
+				margin: 0;
+				overflow: auto;
+				padding: 0;
+				text-align: left;
+			}
+			li {
+				margin: 0 0 5px 0;
+				padding-left: 10px;
+			}
+		}
+	}
+
+	&.editor{
+		.editable-click {
+			border: 1px solid map-get($colors,lgry);
+			color: map-get($colors,gry);
+		}
+
+		p.editable-click{
+			height: 300px;
+			margin: 0;
+			overflow: hidden;
+		}
+
+		.editable-wrap {
+			display: block;
+			width: auto;
+			@include box-sizing(border-box);
+			.editable-controls {
+				> textarea {
+					display: block; 
+					height: 300px;
+					width: 100%;
+					@include box-sizing(border-box);
+				}
+			}
+
+			span.editable-buttons {
+				display: block;
+				margin-top: 5px;
+			}
+
+			button {
+				&[type="submit"] {
+					background: map-get($colors,blue);
+					border: 0;
+					color: #fff;
+					padding: 2px 13px;
+					@include border-radius(3px);
+				}
+
+				&[type="button"] {
+					
+				}
+			}
+		}
+	}
+
+	&.syntaxHighlight {
+		label {
+			margin-right: 30px;
+			input, span {
+				vertical-align: middle;
+			}
+		}
+	}
+}
+
+.ta-toolbar.btn-toolbar {
+	$bd: 5px;
+	background: map-get($colors,mgry);
+	padding: 10px;
+	@include clearfix;
+	// @include colgrid(0,3,left,'.btn-group');
+	.btn-group {
+		float: left;
+		margin: 0 10px 10px 0;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+		button.btn {
+			cursor: pointer;
+		}
+		.btn.btn-default {
+			background: #fff;
+			border: 1px solid #ccc;
+			color: #555;
+			float: left;
+			padding: 10px;
+			text-align: center;
+			&.active {
+				background: #dbdbdb;
+				border-color: #adadad;
+				color: #333; 
+			}
+
+			&:first-child {
+				@include border-radius($bd 0 0 $bd);
+			}
+
+			&:last-child {
+				@include border-radius(0 $bd $bd 0);	
+			}
+		}
+	}
+}
+
+.ta-editor {
+	border: 1px solid map-get($colors,mgry);
+	width: 100%;
+	@include box-sizing(border-box);
+}

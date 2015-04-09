@@ -1,0 +1,48 @@
+@import 'prefixMixies','reset';
+
+body {
+	text-align: center;
+}
+
+.login {
+	border: 1px solid #ccc;
+	margin: 5% auto 0;
+	padding: 20px 10px;
+	text-align: left;
+	width: 500px;
+	@include box-shadow(0 2px 0 #ccc);
+	input {
+		display: block;
+		width: 100%;
+		@include box-sizing(border-box);
+		&[type=text],&[type=password] {
+			margin-bottom: 10px;
+			padding: 5px;
+		}
+
+		&[type=submit] {
+			background: #1cbc1c;
+			border: 0;
+			color: #fff;
+			padding: 10px 0;
+			@include box-shadow(0 2px 0 darken(#1cbc1c,20%));
+		}
+	}
+	label {
+		color: #999;
+	}
+
+	.title {
+		color: #555;
+		margin: 0 0 10px 0;
+		text-align: center;
+	}
+
+	.error {
+		background: lighten(red,15%);
+		border: 1px solid red;
+		color: #fff;
+		padding: 5px 0;
+		text-align: center;
+	}
+}
